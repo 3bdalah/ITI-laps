@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact info </title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        fieldset {
+            border: none;
+        }
+        </style>
+</head>
+<body>
+    
+    <form class="form-contact">
+        <label >User ID:</label>
+        <input type="hidden" id="userId" name="userId" value="12345">
+
+        <label >First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label >Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label >Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label >Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label >Repeat Password:</label>
+        <input type="password" id="repeatPassword" name="repeatPassword" required>
+
+        <label >Birth Date:</label>
+        <input type="date" id="birthDate" name="birthDate">
+
+        <label >User Picture:</label>
+        <input type="file" id="userPicture" name="userPicture">
+
+        <fieldset>
+            <legend>Gender:</legend>
+            <label>
+                <input type="radio" name="gender" value="male"> Male
+            </label>
+            <label>
+                <input type="radio" name="gender" value="female"> Female
+            </label>
+        </fieldset>
+
+        <label>Faculty:</label>
+        <select id="faculty" name="faculty">
+            <option value="engineering">Engineering</option>
+            <option value="Law">Law</option>
+            <option value="arts">Arts</option>
+        </select>
+
+        <fieldset>
+            <legend>Interests:</legend>
+            <label>
+                <input type="checkbox" name="interests" value="programming"> Programming
+            </label>
+            <label>
+                <input type="checkbox" name="interests" value="reading"> Reading
+            </label>
+            <label>
+                <input type="checkbox" name="interests" value="swimming"> Swimming
+            </label>
+        </fieldset>
+
+        <label >About You:</label>
+        <textarea  name="aboutYou"></textarea>
+
+        <label>
+            <input type="checkbox" name="agreeToTerms" required>
+            I agree to the <a href="index.html" target="_blank">terms and conditions</a>
+        </label>
+
+        <div>
+            <input type="submit" value="Submit" accesskey="s">
+            <input type="reset" value="Reset" accesskey="r">
+        </div>
+    </form>
+</body>
+</html>
