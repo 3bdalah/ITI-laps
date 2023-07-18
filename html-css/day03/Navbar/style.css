@@ -1,0 +1,33 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding:0;
+}
+
+.navbar{
+
+}
+.navbar .list-nav{
+    margin: 0;
+    list-style: none;
+    width: 100%;
+    height:40px;
+    background-color: hsl(0deg 0% 20%);
+    margin-block-end: 0em;
+    margin-block-start: 0em;
+    padding-inline-start: 0px;
+}
+.navbar .list-nav li{
+   display:inline-block;
+   width: 150px;
+   height: 40px;
+   text-align: center;
+   /* margin: auto; */
+   line-height: 2;
+   margin: 0;
+   border:none;
+   background-color: #aaa;
+}
