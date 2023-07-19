@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+.msg-user{
+    text-align: center;
+    color:cadetblue;
+    margin-top:20px;
+}
+.tip-js{
+    margin-top: 40px;
+    font-size: 40px;
+    font-weight: 500;
+    color:#888;
+    text-align: center;
+}
+
+
+
+
+
+
+
