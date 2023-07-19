@@ -1,0 +1,75 @@
+body{
+    /* background-color: aqua; */
+   font-family: 'Courier New', Courier, monospace;
+}
+
+
+.skills{
+    padding: 10px 20px;
+    border-radius: 10px 20px;
+    background: #fefefe;
+    border: 1px solid #ddd;
+    /* position: relative; */
+    /* display: block; */
+}
+
+.hide-skills{
+    display: none;
+}
+
+.list-skills{
+    list-style: none;
+}
+.skill{
+    background-color: #ededee;
+    padding:10px 1px 10px 10px;
+    border: 1px solid #eee; 
+    display: inline-block;
+   width: 100px;
+   text-align: center;
+   margin: 10px ;
+   position: relative;
+  
+   
+}
+
+.close{
+    border: 1px solid #eee;
+    padding: 2px 5px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+.empty-list{
+    text-align: center;
+    font-weight: 30px;
+    color:red;
+    display: none;
+}
+
+.show-error{
+    display: block;
+
+}
+
+.remove{
+    display: none;
+}
+
+.toggle-pop{
+    position: fixed;
+    top:300px;
+    right: 10px;
+    width: 100px;
+    border: none;
+    background:#30a200;
+    border-radius: 10px;
+    height:30px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
