@@ -8,18 +8,88 @@
 </head>
 <body>
     <!-- assignment 01 -->
-    <h1 class="msg-user" id="msg-user">Hello User</h1>
-    <h2 class="tip-js" id="board-tip">Tip day : <span id="tip-js"></span> </h2>
-    <button class="generate-tip" id="generate-tip">Generate Tip</button>
+    <section class="assignment-view">
+        <h1>Assigment 01</h1>
+        <h1 class="msg-user" id="msg-user">Hello User</h1>
+        <h2 class="tip-js" id="board-tip">Tip day : <span id="tip-js"></span> </h2>
+        <button class="generate-tip" id="generate-tip">Generate Tip</button><br>
+    </section>
 
 
 
     <!-- assignmetn 02 -->
-    <button id="btn-date-time">display date and time</button>
-
+    <section class="assignment-view">
+    <h1>Assigment 02</h1>
+    <button id="btn-date-time">display date and time</button><br>
+    <p id="display-local-format"></p>
+    </section>
+    
+    
+    
+    
     <!-- assignment 03 -->
-    <button id="btn-check-email">Check Your email</button>
-    <p id="show-rslt-validate"><span id="rslt-email-validate"></span></p>
+    <section class="assignment-view">
+        <h1>Assigment 03</h1>
+        <button id="btn-check-email">Check Your email</button>
+        <p id="show-rslt-validate"><span id="rslt-email-validate"></span></p>
+    </section>
+
+
+
+    <!-- assigment 04
+    <section class="assignment-view">
+        <h1>Assigment 04</h1>
+        <label>Enter Your User</label><br>
+        <input type="text" id="username"><br>
+        <label>Enter Your Email </label><br>
+        <input type="email" id="useremail"><br>
+        <button id="btn-check-username">Check My Account</button>
+    </section> -->
+    
+    
+    
+    <!-- assignment05 -->
+    <section class="assignment-view">
+        <h1>Assigment 05</h1>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" pattern="^[A-Za-z]+(?: [A-Za-z]+)+$" required
+            title="Full Name should be characters only (without numbers or special characters)">
+        <button id="btn-full-name">show full name</button>
+        <p id="show-full-name"></p>
+    </section>
+    
+    
+    <!-- assignment 06 -->
+    <section class="assignment-view">
+        <h1>Assigment 06</h1>
+        <strong>Grades Students Degree</strong>
+        <ul id="list-grades" class="list-inline"></ul>
+        <br>
+        <strong>Grades Students Degree After Sorted</strong>
+        <ul id="list-grades-after-sort" class="list-inline"></ul><br/>
+        
+        <strong>Grades Students Degree  less then 60 </strong>
+        <ul id="list-grades-less-sixty" class="list-inline"></ul>
+    </section>
+
+
+
+
+
+    <!-- assignment 07  -->
+    <h2>Array Object</h2>
+    <ul id="list-array"></ul>
+     
+    <h3>a.	Find student Name, who got degree between 90 and 100 </h3>
+    <p id="find-between"></p>
+
+
+
+    <!-- show date -->
+    <section class="assignment-view">
+        <button id="btn-show-date">show date </button>
+    </section>
+    
     <script src="app.js"></script>
 </body>
 </html>
