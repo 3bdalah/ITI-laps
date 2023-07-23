@@ -18,14 +18,33 @@ button{
     cursor: pointer;
 }
 .btn-close{
-    border:2px solid #333;
+    box-shadow: 1px 1px 50px #777, -1px -1px 50px #777;
+    text-transform: capitalize;
+    font-size: 30px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: #fff;
+    border: 2px solid #efefef;
     width: 100px;
-    background-color: #efefef;
-    color: #000;
+    background-color: #ff3030;
+    /* color: #000; */
     text-align: center;
-    line-height: 2;
-    height: 40px;
+    line-height: 3.4;
+    height: 100px;
     position: fixed;
-    top:30px;
-    left:40px;
+    top: 30px;
+    left: 40px;
+}
+.text-area{
+    height:1400px;
+    width:450px;
+}
+
+.assignment-view{
+    width: 100%;
+    height:100vh;
+    text-align: center;
+}
+h1{
+    text-align: center;
 }

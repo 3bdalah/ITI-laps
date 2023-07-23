@@ -19,14 +19,15 @@ const btnShowDate = document.getElementById("btn-show-date");
 const showTime = document.getElementById("show-time");
 
 btnShowDate.addEventListener("click",()=>{
+    alert("Clock started");
     const startShowTime = setInterval(append,0);
     window.addEventListener("keydown",(e)=>{
         if(e.altKey && e.key.toLowerCase() === "w"){
             console.log("alt + w");
+            alert("Clock is Stoped !");
             setTimeout(()=>{
                 clearInterval(startShowTime)
             },0);
-            alert("Clock is Stoped !");
         }
     });
     
@@ -65,10 +66,14 @@ function handleIncreasCnt(){
         counter++;
         alert(`counter Equal :  ${counter}`)
         showCounter.textContent = counter;
+
 }
 function handleToRemoveEvent(){
     imgs.forEach((imgNew) => {
         imgNew.removeEventListener("click",handleIncreasCnt);
+        imgNew.addEventListener("click",()=>{
+            console.log("click mouse");
+        })
     });
     console.log("set time out removed");
     alert(`Game Over And Your Score ${counter}`);
@@ -94,8 +99,10 @@ btnSubmit.addEventListener("click",(e)=>{
         
         alert("Your Input Empty");
     }else{
-
-        window.open(`/profile.html?userName=${inputUserName.value}`)
+       
+        window.open(`/profile.html?userName=${inputUserName.value}`);
+        inputPassword.value = "";
+        inputUserName.value = "";
     }
 });
 
@@ -103,20 +110,21 @@ btnSubmit.addEventListener("click",(e)=>{
 
 
 // // assignment 05 
-// const btnAnchor = document.getElementById("btn-anchor");
-
-// btnAnchor.addEventListener("click",(e)=>{
-//     e.preventDefault();
-//     setTimeout(mo,5000);
+const btnAnchor = document.getElementById("btn-anchor");
+const btnclose = document.getElementById("close-window");
+console.log("clicked new window");
+btnAnchor.addEventListener("click",(e)=>{
+    e.preventDefault();
+    setTimeout(openNewWindow,5000);
+})
+// btnclose.addEventListener("click",()=>{
+//     window.close("test.html");
 // })
-
-// const mo = () => {
-//     window.open("test.html");
-// }
-
+const openNewWindow = () => {
+    window.open("test.html");
+}
 
 
-// assignment 06 
 
 // assignment 06
 window.addEventListener("DOMContentLoaded",()=>{
@@ -138,21 +146,14 @@ window.addEventListener("DOMContentLoaded",()=>{
 // assignment 07 
 window.addEventListener("DOMContentLoaded",()=>{
     const inputValidUser = document.getElementById("second-username");
-    // inputValidUser
-    // inputValidUser.addEventListener("input",()=>{
         inputValidUser.addEventListener("keydown",(e)=>{
             console.log("event",e.key);
             let KeyUser = e.key;
-            if(KeyUser >= 'a' && KeyUser <='z') {
-                
-                console.log('Done');
-            }else{
-                e.preventDefault();
-            }
-        // });
+            if(KeyUser >= 'a' && KeyUser <='z')    console.log('Done');
+            else e.preventDefault();
+            
     })
-})
-//keyCode
+});
 
 
 

@@ -8,48 +8,83 @@
 </head>
 <body>
     <!-- assignment 01 -->
-    <textarea id="text-box" class="text-box"></textarea>
+    <section class="assignment-view">
+        <h1>Assignment 01</h1>
+        <textarea id="text-box" class="text-box"></textarea>
+    </section>
     <br>
     <!-- assignment 02  -->
-    <button id="btn-show-date">show date</button>
-    <p id="show-time"></p>
+    <section class="assignment-view">
+        <h1>Assignment 02</h1>
+        <button id="btn-show-date">show date</button>
+        <p id="show-time"></p>
+    </section>
     
+    <br/>
 
     <!-- assignment 03-->
-    <div class="imgs-box" id="imgs-box">
-       <img src="./images/1.jpg" alt="image-one" name="one" class="img"/>
-       <img src="./images/2.jpg" alt="image-two" name="two" class="img"/>
-       <img src="./images/3.jpg" alt="image-three" name="three" class="img"/>
-       <p class="show-counter" id="show-counter"></p>
-    </div>
+    <section class="assignment-view">
+        <h1>Assignment 03</h1>
+        <div class="imgs-box" id="imgs-box">
+           <img src="./images/1.jpg" alt="image-one" name="one" class="img"/>
+           <img src="./images/2.jpg" alt="image-two" name="two" class="img"/>
+           <img src="./images/3.jpg" alt="image-three" name="three" class="img"/>
+           <p class="show-counter" id="show-counter">0</p>
+        </div>
+    </section>
 
-
+    <br/>
     <!-- assignment 04   -->
-    <form method="get">
-       <label>user name</label>
-       <input type="text"id="input-username" name="userName" placeholder="Enter Your user name here">
-       <br>
-       <label>Password</label>
-       <input type="password" id="input-password" placeholder="enter your password" >
-       <button type="submit" id="btn-login">Login</button>
-    </form>
-
+    <section class="assignment-view">
+        <h1>Assignment 04</h1>
+        <form method="get">
+           <label>user name</label>
+           <input type="text"id="input-username" name="userName" placeholder="Enter Your user name here">
+           <br>
+           <label>Password</label>
+           <input type="password" id="input-password" placeholder="enter your password" >
+           <button type="submit" id="btn-login">Login</button>
+        </form>
+    </section>
+    <br/>
     <!-- assignment 05 -->
-    <a id="btn-anchor" href="test.html" >new Window</a>
+    <section class="assignment-view">
+        <h1>Assignment 05</h1>
+        <a id="btn-anchor" href="test.html" target="_blank" >new Window</a>
+    </section>
+    <!-- <button id="close-window" >close window</button> -->
     
-    
+    <br/>
     <!-- assignment 06 -->
+    <section class="assignment-view">
+        <h1>Assignment 06</h1>
+        <label for="checked" id="btn-check"><a href="test.html" target="_blank" >
+            <input type="checkbox" name="checked" id="checked" for="checked">
+            check this text box    </a>
+        </label>
+    </section>
     
-    <input type="checkbox" name="checked" id="checked">
-    <label for="checked" id="btn-check"><a href="test.html">check this text box    </a></label>
     
     
     
-    
-    
+    <br/>
     <!-- assignment 07 -->
-    <input type="text" id="second-username">
+    <section class="assignment-view">
+        <h1>Assignment 07</h1>
+        <textarea type="text" id="second-username" class="text-area"></textarea>
+    </section>
     
+
+
+
+
+
+    <br/> 
+    <!-- assignment bonus maps  -->
+    <section class="assignment-view">
+        <h1>Assignment bonus</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d28158.30463833534!2d30.762598399999998!3d28.0920064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1690103112924!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
     <script src="app.js"></script>
 </body>
 </html>
