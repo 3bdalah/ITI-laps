@@ -1,4 +1,8 @@
-
+.img-valid{
+  width: 20px;
+  height:20px;
+  display: none;
+}
 
 
 
@@ -15,3 +19,87 @@ input[type="checkbox"]{
 .empty{
     color:red;
 }
+
+
+.photo{
+    transition:  0.5s
+}
+
+
+.slides {
+    position: relative;
+    width: 500px; /* Adjust the width according to your image size */
+    overflow: hidden;
+  }
+  
+  .imgs-box {
+    display: flex;
+    transition: transform 0.5s;
+  }
+  
+  .img-slide {
+    width: 500px; /* Adjust the width according to your image size */
+  }
+  
+  .group-btns {
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-right: 10px;
+  }
+
+.parent-img img{
+    width:300px;
+    height:200px;
+}
+
+button{
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

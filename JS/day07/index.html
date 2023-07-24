@@ -6,11 +6,16 @@
     <title>Day07</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <form id="form" >
-        <label >Full Name <span id="astrick-name" class="astrick">*</span></label>
+<!-- <body>
+    <form id="form" method="test.html" method="get">
+        <label >Full Name <span id="astrick-name" class="astrick">*</span>
+        <img src="./Images/validmedia/valid.png"  id="imgvalidname" alt="validefullname" name=""   class="img-valid"/>
+        <img src="./Images/validmedia/notvalid.png"  id="imgnotvalidname" alt="validefullname" name=""   class="img-valid"/>
+        </label>
         <input type="text" name="fullname" id="fullname" placeholder="Ente You Name" required pattern="^[A-Za-z ]{1,}$"/> <br/>
-        <label >Email <span id="astrick-email" class="astrick">*</span></label>
+        <label >Email <span id="astrick-email" class="astrick">*</span>  <img src="./Images/validmedia/valid.png"  id="imgvalidname" alt="validefullname" name=""   class="img-valid"/>
+            <img src="./Images/validmedia/notvalid.png"  id="imgnotvalidname" alt="validefullname" name=""   class="img-valid"/>
+          </label>
         <input type="email"  name="email" id="email-input" placeholder="Enter Your Email" required/><br/>
         <select id="city-list">
             <option class="option">Cairo</option>
@@ -21,17 +26,22 @@
             <option class="option">gharbya</option>
             <option class="option">Assuit</option>
         </select><br/>
-        <label>Password <span id="astrick-password1" class="astrick">*</span></label>
+        <label>Password <span id="astrick-password1" class="astrick">*</span>  <img src="./Images/validmedia/valid.png"  id="imgvalidname" alt="validefullname" name=""   class="img-valid"/>
+            <img src="./Images/validmedia/notvalid.png"  id="imgnotvalidname" alt="validefullname" name=""   class="img-valid"/>
+          </label>
         <input type="password" name="password" id="password1" placeholder="Enter Your Password" required/><br/>
-        <label>Confiremed Your Password <span id="astrick-password2" class="astrick">*</span></label>
+        <label>Confiremed Your Password <span id="astrick-password2" class="astrick">*</span>  <img src="./Images/validmedia/valid.png"  id="imgvalidname" alt="validefullname" name=""   class="img-valid"/>
+            <img src="./Images/validmedia/notvalid.png"  id="imgnotvalidname" alt="validefullname" name=""   class="img-valid"/>
+          </label>
         <input type="password" name="password" id="password2" placeholder="Repeat Your Password" required/>
         <div id="valid-password"><p id="show-validate"></p></div><br/>
         <input type="checkbox" name="checkbox" id="checkbox" />
         <label for="checkbox">I accept the terms and conditions <span id="astrick-checkbox" class="astrick">*</span></label><br/>
 
-        <input type="submit" value="0" id="btn-register"/>
+        <input type="submit" value="Registar" id="btn-register"/>
 
     </form>
+ -->
 
 
 
@@ -42,9 +52,22 @@
 
 
 
-
-
-
+    <!-- assignment 05 -->
+   <div class="slides" id="slides">
+    <div class="imgs-box">
+        <img src="./slides/1.jpg" alt="img1"  class="img-slide"/>
+        <img src="./slides/2.jpg" alt="img2"  class="img-slide"/>
+        <img src="./slides/3.jpg" alt="img3"  class="img-slide"/>
+        <img src="./slides/4.jpg" alt="img4"  class="img-slide"/>
+        <img src="./slides/5.jpg" alt="img5"  class="img-slide"/>
+    </div>
+      <div class="group-btns">
+        <button id="start">start</button>
+        <button id="next">next</button>
+        <button id="previous">previous</button>
+        <button id="stop">stop</button>
+      </div>
+   </div>
 
 
 
@@ -57,6 +80,25 @@
        <img src="./Images/5.jpg" alt="photo5" name="photo5" id="photo5" class="photo"/>
        <img src="./Images/6.jpg" alt="photo6" name="photo6" id="photo6" class="photo"/>
     </div>
+
+
+
+
+
+
+    <!-- assignment 07  -->
+
+    <section class="assignment07">
+    
+    <div class="parent-img" id="parent-img">
+
+     </div>
+
+     <button id="btn-remove">remove child img</button>
+     <button id="btn-append">append child img</button>
+     <button id="show-count-nodes">Show Count Child Nodes</button>
+    <h2>Count Child Node Iat Parent :<span id="counter-nodes"></span> </h2>
+    </section>
     <script src="app.js"></script>
 </body>
 </html>

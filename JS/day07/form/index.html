@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registration-form" action="thank-you.html" method="post">
+        <label>Full Name <span>*</span></label>
+        <input type="text" name="fullname" id="fullname" placeholder="Enter your Name:" required pattern="^[A-Za-z ]{1,}$" />
+        <span id="fullname-validation" style="display: none; color: red;">Invalid name</span><br>
+    
+        <label>Email <span>*</span></label>
+        <input type="email" name="email" id="email" placeholder="Enter Your Email" required><br>
+    
+        <label>City</label>
+        <select name="city" id="city">
+            <option value="Cairo">Cairo</option>
+            <option value="Alexandria">Alexandria</option>
+            <option value="Giza">Giza</option>
+            <option value="Luxor">Luxor</option>
+            <option value="Aswan">Aswan</option>
+        </select><br>
+    
+        <label>Password <span>*</span></label>
+        <input type="password" name="password" id="password" required><br>
+    
+        <label>Repeat Password <span>*</span></label>
+        <input type="password" name="repeat_password" id="repeat_password" required>
+        <span id="password-validation" style="display: none; color: red;">Password and repeat password should be the same</span><br>
+    
+        <input type="checkbox" name="terms" id="terms" required>
+        <label for="terms">I accept the terms and conditions</label><br>
+    
+        <input type="submit" value="Register">
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
