@@ -1,0 +1,17 @@
+
+
+
+
+input{
+    height:30px;
+    width:200px;
+    margin:10px 20px;
+    border:none;
+}
+input[type="checkbox"]{
+  margin: 0;
+}
+
+.empty{
+    color:red;
+}
