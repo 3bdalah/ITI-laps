@@ -1,0 +1,11 @@
+#borad{
+    width:800px;
+    height:800px;
+    border:2px solid #eee;
+}
+
+#box-img{
+    width: 400px;
+    height: 400px;
+    border: 2px solid;
+}

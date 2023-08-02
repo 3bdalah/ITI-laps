@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 01 html 5 </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body   id="drag-body" ondrop="event">
+    
+    <form method="get">
+         <label for="username">name</label>
+         
+         <input type="text" placeholder="Enter Your Username here" name="username" id="username" required />
+         <br>
+         <label for="email">Yuor Email</label>
+         <input type="text"  placeholder="Enter Your email here" name="email" id="email" required />
+         <br>
+         <!-- <label id="textarea">Your Message</label> -->
+         <textarea id="textarea" name="textarea" placeholder="write your message here" required></textarea>
+         <br>
+         <label id="phone">Your phone       </label>
+         <input type="tel" name="phone" placeholder="Enter Your Phone Here"  id="phone" required />
+         <br>
+         <button type="submit" id="sendmessage">Send Message</button>
+    </form>
+
+    <!-- assignment 2  -->
+
+    <header class="header"><h1>header</h1></header>
+    <nav class="nav"><h1>navbar</h1></nav>
+    <section class="parent-section">
+        <div class="side-left">
+            <section class="top-section-left">
+                <h2>section  top </h2>
+            </section>
+            <section class="bottom-section-left">
+                <h2>section bottom</h2>
+            </section>
+        </div>
+        
+        <aside class="aside-right">
+            <h2>aside Right </h2>
+        </aside>
+    </section>
+    <footer class="footer">
+     <h2>footer</h2>
+    </footer>
+
+
+
+
+    <!-- assignment 3  -->
+
+    <figure class="figure-img">
+        
+        <figcaption>uncle bob</figcaption>
+        <img src="./images/uncle_bob.png" alt="uncle bob"/>
+    </figure>
+
+    <hgroup>
+        <h1>head one</h1>
+         <h2>head two </h2>
+         <h3>head three </h3>
+         <h4>head four </h4>
+    </hgroup>
+
+    <input type="tel" name="phone" id="user-phone"  placeholder="user phone ">
+
+
+
+    <!-- assignment 4 and drag drop -->
+     <section class="box-imgs" id="drag-box" ondrop="event">
+        <h3>drag here your iamges</h3>
+     </section>
+
+     <img id="drageimg1" draggable="true" class="img" src="./images/begrin.webp" alt="begrin" />
+     <img id="drageimg2"  draggable="true" class="img" src="./images/Bjarne2.jpg" alt="begrin" />
+     <img id="drageimg3" draggable="true"  class="img" src="./images/bjarne.jpg" alt="begrin" />
+     <!-- <img id="drageimg4" src="./images/" alt="begrin" /> -->
+     
+     <section class="box-imgs" id="drag-box-bottom" ondrop="event">
+        <h3>drag here your iamges</h3>
+     </section>
+      
+
+    <script src="app.js"></script>
+</body>
+</html>
