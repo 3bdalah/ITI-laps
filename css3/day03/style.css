@@ -1,0 +1,147 @@
+
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap'); */
+
+@font-face {
+   font-family: 'Roboto';
+   src : url("https://fonts.googleapis.com/css2?family=Roboto&display=swap") format('truetype');
+}
+
+p{
+    font-family: 'Roboto' ,sans-serif;
+    font-weight: 900;
+}
+
+/* *{
+    margin: 0;
+    padding:0;
+
+} */
+
+.box-cureved{
+    border-radius: 10px;
+    height:50px;
+    width:100px;
+    border:2px solid #aaa;
+    margin: 10px;
+}
+
+
+
+
+
+/*  asignment 03  */
+
+.clm-description {
+    column-count: 5; 
+    column-rule: 3px solid #ccc;
+    column-gap: 15px; 
+}
+
+
+body {
+    height: 1000px !important;
+    margin: 0;
+    /* overflow: hidden; */
+}
+
+.vert-name {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(70%, 60%) rotate(-90deg);
+    transform-origin: top left;
+    font-size: 48px;
+    white-space: nowrap;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    letter-spacing: 6px;
+}
+
+
+
+.img-box {
+    width:200px;
+    height:200px;
+    display: block;
+    /* position: relative; */
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.img-box img {
+    max-width: 100%;
+    height: auto;
+}
+
+.img-box:hover {
+    transform: rotate(20deg) scale(1.2);
+}
+
+
+
+
+
+
+
+/* assigneny 06 */
+
+/* .parent-box,.tiger-box-parent{
+    position: relative;
+} */
+
+
+
+.anim-box {
+    display: block;
+    /* position: absolute; */
+    animation: MovePic 4s infinite linear;
+    width: 50px;
+    height: 50px;
+    margin-left: 100px;
+}
+.anim-box img{
+    max-width: 100%;
+}
+
+@keyframes MovePic {
+    0% {
+        transform: rotate(0) translateX(-50px);
+        width: 50px;
+        height: 50px;
+    }
+    50% {
+        transform: rotate(180deg) translateX(50px);
+        width:150px;
+         height: 150px;
+    }
+    100% {
+        transform: rotate(360deg) translateX(-50px);
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+/* test assinemnt 7 */
+.tiger {
+    position: absolute;
+    animation-name: tiger;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    width:500px;
+    height:500px;
+  }
+
+  @keyframes tiger {
+    0%, 100% {
+        left: 0;
+        transform: rotateY(180deg);
+    }
+    50% {
+        left: 700px;
+        transform: rotateY(360deg);
+    }
+  }
