@@ -1,9 +1,13 @@
-// asignment 01 
-$('.red').css('background-color', "red");
-$('.blue').css('background-color', "blue");
-$('.green').css('background-color', "green");
+// asignment 01  /// danymic 
+$(".container1 div").each(function () {
+    var divColorArr = $(this).attr("class")
+     $(this).css("background", divColorArr);
+});
 
-
+$(".container1 div p").each(function(){
+    var textColorArr = $(this).attr("class");
+        $(this).css("color" ,textColorArr)
+})
 
 
 // assignemnt 02 

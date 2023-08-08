@@ -1,9 +1,8 @@
-
-
 // asignment 01
 $('.container1').append('<div class="black"></div>');            
 $('.container1').prepend('<div class="white"></div>');
 $('<p class="yellow">welcome new user </p>').insertBefore('.pink');
+
 
 
 
@@ -22,16 +21,10 @@ $('.container3 img').wrap('<figure></figure>');
 // Insert a new <figcaption> element with text content "Coffee" after the image
 $('.container3 img').after('<figcaption>Coffee</figcaption>');
 
-
-
 // assignment 04 
 $('.container4 td.col-age').empty();
 $('.container4 td:contains("Mohsen")').addClass('man');
 $('.container4 td').toggleClass('your-email');
-
-
-
-
 
 // assignment 05 bonus 
 

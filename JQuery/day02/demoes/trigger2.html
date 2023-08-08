@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882"> 
+	
+<head> 
+	<title> 
+		jQuery trigger() Method 
+	</title> 
+
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> 
+	</script> 
+	
+	<style> 
+		div { 
+			width: 300px; 
+			height: 100px; 
+			border: 1px solid green; 
+			text-align: center; 
+		} 
+	</style> 
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor msdt:dt="string">lec41@mcitegypt.onmicrosoft.com</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Editor>
+<mso:Order msdt:dt="string">19500.0000000000</mso:Order>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author msdt:dt="string">lec41@mcitegypt.onmicrosoft.com</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_Author>
+<mso:ContentTypeId msdt:dt="string">0x0101</mso:ContentTypeId>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head> 
+
+<body> 
+	<div> 
+		<input id="name" type="text"
+				placeholder="Input text..." value="test"/> 
+		
+		<br/> 
+		
+		<p> 
+			click anywhere inside div to 
+			focus input element. 
+		</p> 
+	</div> 
+	
+	<!-- Script to use trigger() method -->
+	<script> 
+		$(document).ready(function() { 
+			$("#name").focus(function(){
+				$("#name").after("test")
+				$("#name").css("border", "2px solid red")
+			})
+			
+			$("div").click(function() { 
+				$("#name").focus(); 
+			}) 
+		}); 
+	</script> 
+</body> 
+
+</html>	

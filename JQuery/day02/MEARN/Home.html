@@ -1,0 +1,149 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
+    <style>
+        #myDiv {
+            width: 100px;
+            height: 100px;
+            background-color: aqua;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="myDiv">
+
+        <span>My Span</span>
+    </div>
+    <!-- <input type="text" value="My Text">
+    <button>Click Me</button> -->
+
+    <script>
+
+        var info = {
+            firName: "Ahmed",
+            age: 23
+
+        }
+        $(document).ready(
+            //    console.log("With :" +$('div').width()),
+            //    console.log("InnerWidth :" +$('div').innerWidth()),
+            //    console.log("OuterWidth :" +$('div').outerWidth()),
+            //    console.log("OuterWidth :" +$('div').outerWidth(true))
+
+
+            // $('div').click(function(){
+            //     alert('hi')
+            // })
+            // $('div').mousemove(function(){
+            //     alert('hi')
+            // })
+
+            // $('div').on('click',function(){
+            //     alert('welcome Div')
+            // })
+
+            // $('div span').on('click',function(){
+            //     alert('welcome Div')
+            // })
+
+            // $('div').on('click','span',function(){
+            //     alert('welcome Span')
+            // })
+
+            // $('div').on('click','span',{firName:"Ahmed"},function(event){
+            //     console.log(event.data)
+            //     alert('welcome Span')
+            // })
+
+            // $('div').on('click','span',info,function(event){
+            //     console.log(event.data)
+            //     alert('welcome Span')
+            // })
+
+            // $("div").on('click',function(){
+            //     alert('I am Div')
+            // }),
+
+            // $("div").on('mousemove',function(){
+            //     console.log('I am Div')
+            // })
+
+            // $("div").on(
+            //     {
+            //         click:function(){
+            //          alert('I am Div')
+            //         }
+            //     ,
+
+            //         mousemove:function()
+            //         {
+            //             console.log("welcome I am Div")
+            //         }
+
+            //     }
+            // )
+
+            // $("div").on(
+            //     {
+            //         click:function(){
+            //          alert('I am Div')
+            //         }
+            //     ,
+
+            //         mousemove:function()
+            //         {
+            //             alert("I am Div")
+            //         }
+
+            //     }
+            // )
+
+            // $('div').on("click mousemove",function(){alert('I am Div')})
+
+            // $("div").on("click",function(){alert("Welcome")})
+            // $("div").one("click mousemove",function(){alert("Welcome")})
+
+
+            // console.log($("div")),
+            // $("input").select(function () {
+            //      console.log("I am Input")
+            //     $(this).after("Text marked!")
+            // }),
+            // $("button").click(function () {
+            //     // debugger;
+            //     console.log("I am button")
+            //     $("input").trigger("select")
+            // })
+        //     $("div").hide(5000, function (){
+        //         $(this).css("background","blue")
+        //         alert(" I am Div")
+        //     }),
+
+        // //    $("div").show(5000),
+        //    $("div").toggle(4000)
+
+
+            //  $("div").slideUp(5000,"swing")
+            $.fn.greenify=function(color="red")
+            {
+                console.log(color)
+                this.css("color",color)
+                return this
+            },
+            $("div").greenify("green")
+        )
+    </script>
+</body>
+
+</html>

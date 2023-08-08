@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Highlighter Plugin</title>
+    <style>
+        .box {
+            width:100px;
+            height:100px;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>This is a sample paragraph for testing the TextHighlighter plugin.</p>
+    <div class="box">
+     <button id="modifyButton">handle button</button>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+       $.fn.modifyBox = function (options) {
+    var settings = $.extend(
+      {
+        color: "black",
+        width: 100,
+      },
+      options
+    );
+
+    return this.each(function () {
+      var $box = $(this);
+      $box.css("background-color", settings.color);
+      $box.width(settings.width);
+    });
+  };
+  $("#modifyButton").click(function () {
+    $(".box").modifyBox({
+      color: "blue",
+      width: 500,
+    });
+    
+  });
+    </script>
+</body>
+</html>
