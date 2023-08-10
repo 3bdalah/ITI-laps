@@ -10,50 +10,57 @@
 // assignemnt 02 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// Using Array.filter() with an arrow function to return odd numbers
 const oddNumbers = numbers.filter(number => number % 2 !== 0);
 console.log("Odd Numbers:", oddNumbers);
 
-// Using Array.forEach() with an arrow function to print even values
+
+
 numbers.forEach(number => {
     if (number % 2 === 0) {
         console.log("Even Number:", number);
     }
 });
 
-// Using Array.map() with an arrow function to print the square of each element
+
+
 const squares = numbers.map(number => number ** 2);
 console.log("Squared Numbers:", squares);
 
-// Demo to explain the difference in 'this' context between arrow and regular functions
-const regularFunction = function() {
-    console.log("Regular Function - this:", this);
+
+
+// Demos
+let elsayed = {
+     regularFunction  : function() {
+        console.log("Regular Func ----------> this:", this); // global  object
+        
+    },
+    name: "Mohesen",
+    childs : "mostafa",
+     arrowFunction : () => {
+        console.log("Arrow Func ------------> this:", this);
+    }
 };
 
-const arrowFunction = () => {
-    console.log("Arrow Function - this:", this);
-};
+console.log(elsayed.arrowFunction());
+console.log(elsayed.regularFunction());
 
-regularFunction(); // 'this' refers to the calling context (usually the global object)
-arrowFunction();  // 'this' refers to the surrounding lexical scope (where the arrow function was defined)
 
 
 
 const colors = ['red', 'green', 'blue', 'yellow'];
 
-// Using for...in loop to iterate over array indices
-console.log("Using for...in loop:");
+console.log("Using for in :");
 for (const index in colors) {
     console.log(index, colors[index]);
 }
 
-// Using for...of loop to iterate over array elements
-console.log("\nUsing for...of loop:");
+console.log("\nUsing for of :");
 for (const color of colors) {
     console.log(color);
 }
 
-// Using .forEach() method to iterate over array elements
+
+
 console.log("\nUsing .forEach() method:");
 colors.forEach((color, index) => {
     console.log(index, color);
@@ -80,11 +87,11 @@ const tipsGenerator = function*() {
     }
 };
 
-const displayButton = document.getElementById('displayButton');
+const displayBtn = document.getElementById("displayButton");
 const intervalButton = document.getElementById('intervalButton');
 const tipDisplay = document.getElementById('tipDisplay');
 
-displayButton.addEventListener('click', () => {
+displayBtn.addEventListener('click', () => {
     tipDisplay.innerHTML = "";
     const tips = tipsGenerator();
     for (const tip of tips) {
