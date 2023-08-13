@@ -1,0 +1,68 @@
+// import files 
+@import "test.scss";
+
+
+@mixin custom-styles($color) {
+    background-color: $color;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($color, 10%);
+    }
+}
+
+.custom-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+
+.box-one {
+    @include custom-styles($main-blue);
+    width: $standerdWidth;
+    height:400px;
+}
+
+.box-two {
+    @include custom-styles($main-red);
+    width: $standerdWidth;
+    height:230px;
+}
+
+
+.lighten {
+    background-color: lighten($primary-color, 50%);
+    height: 20px;
+}
+
+.hsl {
+    background-color: hsl(300, 100%, 50%);
+}
+  
+//  inheritance  
+%base-button {
+    padding: 10px 20px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: $main-red;
+    width: $standerdWidth;
+    height:250px;
+    border-radius: 10px;
+}
+
+
+// inhertaince
+.box-inherit{
+    @extend %base-button;
+    .data{
+        &:hover{
+            color:$main-blue ;
+        }
+    }
+}

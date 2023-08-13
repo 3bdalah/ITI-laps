@@ -1,0 +1,60 @@
+.custom-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-one {
+  background-color: #92ffa1;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 400px;
+  height: 400px;
+}
+.box-one:hover {
+  background-color: #5fff75;
+}
+
+.box-two {
+  background-color: #8f89e2;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 400px;
+  height: 230px;
+}
+.box-two:hover {
+  background-color: #6860d8;
+}
+
+.lighten {
+  background-color: white;
+  height: 20px;
+}
+
+.hsl {
+  background-color: hsl(300, 100%, 50%);
+}
+
+.box-inherit {
+  padding: 10px 20px;
+  border: none;
+  color: white;
+  cursor: pointer;
+  background-color: #8f89e2;
+  width: 400px;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.box-inherit .data:hover {
+  color: #92ffa1;
+}
+
+/*# sourceMappingURL=styles.css.map */
