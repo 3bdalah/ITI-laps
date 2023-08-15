@@ -1,4 +1,4 @@
-// // assignment 01 
+// // assignment 01
 // (() => {
 //     const firstNumber = 5;
 //     const secondNumber = 10;
@@ -6,14 +6,11 @@
 //     alert(sum);
 // })();
 
-
-// // assignemnt 02 
+// // assignemnt 02
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 // const oddNumbers = numbers.filter(number => number % 2 !== 0);
 // console.log("Odd Numbers:", oddNumbers);
-
-
 
 // numbers.forEach(number => {
 //     if (number % 2 === 0) {
@@ -21,18 +18,14 @@
 //     }
 // });
 
-
-
 // const squares = numbers.map(number => number ** 2);
 // console.log("Squared Numbers:", squares);
-
-
 
 // // Demos
 // let elsayed = {
 //      regularFunction  : function() {
 //         console.log("Regular Func ----------> this:", this); // global  object
-        
+
 //     },
 //     name: "Mohesen",
 //     childs : "mostafa",
@@ -43,9 +36,6 @@
 
 // console.log(elsayed.arrowFunction());
 // console.log(elsayed.regularFunction());
-
-
-
 
 // const colors = ['red', 'green', 'blue', 'yellow'];
 
@@ -59,14 +49,10 @@
 //     console.log(color);
 // }
 
-
-
 // console.log("\nUsing .forEach() method:");
 // colors.forEach((color, index) => {
 //     console.log(index, color);
 // });
-
-
 
 // const tipsGenerator = function*() {
 //     const tips = [
@@ -112,30 +98,19 @@
 //     }, 3000);
 // });
 
-
-
-
-
-// New Featured ES6 
-// array destructure 
+// New Featured ES6
+// array destructure
 const numbersss = [1, 2, 3];
 const [first, second, third] = numbersss;
-// object Desrturcture 
+// object Desrturcture
 const person = { name: "Bob", age: 30 };
 const { name, age } = person;
 
-
-
-
-
-
-
-// 
-const propKey = 'name';
+//
+const propKey = "name";
 const personObject = {
-  [propKey]: 'Alice',
-  age: 25
+  [propKey]: "Alice",
+  age: 25,
 };
-
 
 console.log("peson object : ", personObject);
