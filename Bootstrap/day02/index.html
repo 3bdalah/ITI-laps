@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day02 Bootstrap </title>
+    <link rel="stylesheet" href="./style/bootstrap.min.css">
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+      
+    <!-- start section navbar  -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+            <img src="./images/slide2.jpg" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ms-auto mb-2 mb-lg-0" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item ">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">SubProducts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cart</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contact-Us</a>
+              </li>
+            </ul>
+          
+          </div>
+        </div>
+      </nav>
+
+
+
+      <!-- start carsoul part  -->
+
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./images/slide1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Some representative placeholder content for the first slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/slide1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Some representative placeholder content for the second slide.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="./images/slide1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Some representative placeholder content for the third slide.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+
+
+
+      <section class="services">
+       <div class="container">
+         <div class="row ">
+            <div class="col-lg-3 col-md-6 col-sm-12  card-service ">
+                <div class="content-service">
+                  <span class="icon">#</span>
+                  <h3>Title Service</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident accusantium fugit dolorum cum reprehenderit obcaecati voluptatibus debitis similique unde pariatur, corrupti necessitatibus expedita quidem perspiciatis, nobis, neque delectus temporibus suscipit?</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12  card-service ">
+                <div class="content-service">
+                  <span class="icon">#</span>
+                  <h3>Title Service</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident accusantium fugit dolorum cum reprehenderit obcaecati voluptatibus debitis similique unde pariatur, corrupti necessitatibus expedita quidem perspiciatis, nobis, neque delectus temporibus suscipit?</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12  card-service ">
+                <div class="content-service">
+                  <span class="icon">#</span>
+                  <h3>Title Service</h3>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident accusantium fugit dolorum cum reprehenderit obcaecati voluptatibus debitis similique unde pariatur, corrupti necessitatibus expedita quidem perspiciatis, nobis, neque delectus temporibus suscipit?</p>
+                </div>
+            </div>
+         </div>
+       </div>
+      </section>
+
+
+
+      <section class="plane-price">
+             <div class="container">
+                <h2 class="text-center">Host Planse & Pricing </h2>
+              <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12  card-plan">
+                  <p class="title-card ">Title Price</p>
+                  <h2 class="price-plane mt-auto center">$44 <sup>th</sup></h2>
+                  <ul class="list-feat">
+                       <li>item 1</li>
+                       <li>item 2</li>
+                       <li>item 3</li>
+                       <li>item 4</li>
+                       <li>item5</li>
+                  </ul>
+                  <button class="btn  btn-primary">Buy This plan</button>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12 card-plan">
+                    <p class="title-card ">Title Price</p>
+                    <h2 class="price-plane mt-auto center">$44 <sup>th</sup></h2>
+                    <ul class="list-feat">
+                         <li>item 1</li>
+                         <li>item 2</li>
+                         <li>item 3</li>
+                         <li>item 4</li>
+                         <li>item5</li>
+                    </ul>
+                    <button class="btn  btn-primary">Buy This plan</button>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-12  card-plan">
+                    <p class="title-card ">Title Price</p>
+                    <h2 class="price-plane mt-auto center">$44 <sup>th</sup></h2>
+                    <ul class="list-feat">
+                         <li>item 1</li>
+                         <li>item 2</li>
+                         <li>item 3</li>
+                         <li>item 4</li>
+                         <li>item5</li>
+                    </ul>
+                    <button class="btn  btn-primary">Buy This plan</button>
+                  </div>
+              </div>
+             </div>
+      </section>
+
+
+      <section class="cards">
+
+        <h1 class="title-card  center"> Card Section </h1>
+       <div class="container">
+             <div class="row">
+                <div class="card col-lg-3 col-md-6 col-sm-12 " >
+                    <img src="./images/slide1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+
+                  <div class="card col-lg-3 col-md-6 col-sm-12 " >
+                    <img src="./images/slide1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+
+
+                  <div class="card col-lg-3 col-md-6 col-sm-12 " >
+                    <img src="./images/slide1.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+             </div>
+       </div>
+      </section>
+
+
+
+      <footer class="footer">
+        <div class="container">
+       <div class="row">
+        <div  class="col-lg-4 col-md-6 col-sm-12 ">
+            <ul class="list-footer">
+                <li >
+                 <a href="#">link1</a>
+                </li>
+                <li >
+                    <a href="#">link2</a>
+                   </li>
+
+                   <li >
+                    <a href="#">link3</a>
+                   </li>
+                   <li >
+                    <a href="#">link4</a>
+                   </li>
+                   <li >
+                    <a href="#">link5</a>
+                   </li>
+            </ul>
+        </div>
+
+
+        <div  class="col-lg-4 col-md-6 col-sm-12 ">
+            <ul class="list-footer">
+                <li >
+                 <a href="#">link1</a>
+                </li>
+                <li >
+                    <a href="#">link2</a>
+                </li>
+
+                  
+            </ul>
+        </div>
+
+
+
+        <div  class="col-lg-4 col-md-6 col-sm-12 ">
+            <ul class="list-footer">
+                <li >
+                Lorem ipsum dolor sit amet consectetur 
+                </li>
+                <li >
+                     Necessitatibus dolorum officia sequi nobis  </li>
+
+                    <li > 
+                         adipisci accusamus ratione explicabo accusantium quas,
+                         
+                        </li>
+                        <li >
+                             fugit ullam quo excepturi incidunt ut od.</li>
+                
+            </ul>
+        </div>
+
+
+       </div>
+        </div>
+      </footer>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/app.js"></script>
+</body>
+</html>
