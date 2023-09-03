@@ -1,0 +1,43 @@
+Session MongoDB Day-01
+
+
+Nots at session 
+=====================
+programmesfile -> monogdb ->  serverv ->  5.0  -> data
+=====================
+db.createCollection("posts")
+show dbs 
+db.posts.drop()
+show dbs
+db.createCollection("Posts")
+show dbs 
+=====================
+
+db.posts..insertOne({UID : 1 , DateTiem: new Date("2023-09-1"),checkIn : {Location : "Minia", Place : "ITI"},HashTags : ["HI","Morning","DepartMent"],Privacy : True,comments : [{UID: 2, Text : "Hello "}]})
+
+insertOne vs insertMany
+
+$gt = GreaterThan
+$lt = Lessthan 
+$ne = NotEqual 
+$and  = و
+$exists = غير دول 
+$or = أو 
+$in = [more elements] اى عنصر بيساوي دول 
+$nin = not in اي بس مش بيساوي دول 
+===============
+Catch Post By Condation 
+
+
+db.posts.find({"checkIn.location":{$ne : "minia"}})
+
+
+
+
+db.posts.find({$and : []})
+
+=============
+range number gt and less tha
+db.posts.find({$and : [{likes : {$gt : 100}}, {likes : {$lt : 200}}]})
+
+
