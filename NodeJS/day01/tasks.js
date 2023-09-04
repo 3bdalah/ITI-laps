@@ -1,3 +1,8 @@
+/***
+ *    link Repo Task NodeJS - Day 01
+ *  https://github.com/3bdalah/ITI-laps/blob/develop/NodeJS/day01/tasks.js
+ */
+
 // create fucntion calcage
 //  ** Create a function that takes the age in years and returns the age in days.
 function handleAge(age) {
@@ -63,7 +68,6 @@ function handlSort(itemsSort) {
 handlSort([12, -4, 5, 6, 7, 8, 9]);
 
 handlSort([12, 5, 6, 7, 8, 9]);
-// console.log(handlSort([10, 32, 3, 3, 3, -1]));
 
 // ** Create a function that takes an array of numbers and returns the average of this numbers.
 function handleAvaregNum(items) {
