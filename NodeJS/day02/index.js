@@ -230,19 +230,22 @@ app.delete("/deletepost", (req, res) => {
   res.json(posts);
 });
 
-app.put("/updatepost", (req, res) => {
-  const updatedPost = req.body;
+app.patch("/updatepost/:id", (req, res) => {
+  const postId = req.params.id;
+  const updatedFields = req.body;
+
+  // Find the post by its ID and update the specified fields
   posts = posts.map((post) => {
-    if (post.id === updatedPost.id) {
+    if (post.id === postId) {
       return {
         ...post,
-        age: updatedPost.age,
-        name: updatedPost.name,
+        ...updatedFields,
       };
     }
     return post;
   });
-  res.json(posts);
+
+  res.json({ message: "Post updated successfully" });
 });
 
 app.get("/getpostbyid", (req, res) => {
