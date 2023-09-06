@@ -6,6 +6,7 @@ import {
   deleteUserById,
   signIn,
   signUp,
+  getAllUsersBtwRange,
 } from "./user.controller.js";
 const userRoutes = express.Router();
 
@@ -16,6 +17,6 @@ userRoutes.get("/users", getallUsers);
 userRoutes.post("/adduser", addUser);
 // userRoutes.get("/updateu", updateUsers);
 userRoutes.patch("/:id", updateUsers);
-
+userRoutes.post("/getalluserbetween", getAllUsersBtwRange);
 userRoutes.delete("/:id", deleteUserById);
 export default userRoutes;

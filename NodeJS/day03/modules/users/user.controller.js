@@ -8,7 +8,6 @@ const signIn = async (req, res) => {
     if (!user) {
       res.json({ message: "Your Email Not Found : go to sign up Fierst :) " });
     }
-
     // check passsword found or not and corrected
     const passMatch = bcrypt.compare(password, user.password);
     if (passMatch) {
@@ -89,4 +88,26 @@ const deleteUserById = async (req, res) => {
   }
 };
 
-export { getallUsers, updateUsers, addUser, deleteUserById, signIn, signUp };
+// search for use where his age is between x and Y;
+const getAllUsersBtwRange = async (req, res) => {
+  try {
+    const { minAge, maxAge } = req.body;
+    const users = await userModel.find({ age: { $gte: minAge, $lte: maxAge } });
+
+    res.json({
+      message: "List of users within the specified age range",
+      users,
+    });
+  } catch (error) {
+    res.json({ message: "Error from get all users between " });
+  }
+};
+export {
+  getallUsers,
+  updateUsers,
+  addUser,
+  deleteUserById,
+  signIn,
+  signUp,
+  getAllUsersBtwRange,
+};
