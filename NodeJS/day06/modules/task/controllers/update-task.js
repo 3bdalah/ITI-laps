@@ -2,25 +2,24 @@ import mongoose from "mongoose"; // Import mongoose
 import taskModel from "../../../db/models/task.model.js";
 
 export const updateTask = async (req, res) => {
-  let { id } = req.params;
-  let foundedTask = await taskModel.findById(id);
-  let { userId, assignTo, status } = req.body;
   try {
-    // Convert userId to ObjectId
-    const userIdObjectId = await mongoose.Types.ObjectId(userId);
-    console.log("user object id ", userIdObjectId);
+    let { id } = req.params;
+    let foundedTask = await taskModel.findById(id);
+    let newFoundedTask = await foundedTask.populate("userId");
+    console.log("user object id ", newFoundedTask);
     if (!foundedTask) {
-      res.status(401).json({ message: "Task Not Found" });
+      res.status(200).json({ message: "Not found the task " });
     }
-
-    if (userIdObjectId.toString() !== foundedTask.userId.toString()) {
-      res.status(401).json({ message: "userID Creator Uncorrected" });
+    let { userId, assignTo, status } = req.body;
+    // console.log("user ID", userId);
+    // const userIdObjectId = mongoose.Types.ObjectId(userId); // Fixed this line
+    // console.log("founde task userid ", userIdObjectId);
+    if (userId !== foundedTask.userId.$oid) {
+      res.status(404).json({ message: "userID Creator Uncorrected" });
     }
-
     let afterUpdate = await taskModel.findByIdAndUpdate(id, {
       status: status,
     });
-
     let allTasks = await taskModel.find();
     res.status(201).json({
       message: "After Updated",
@@ -29,6 +28,6 @@ export const updateTask = async (req, res) => {
       allTasks,
     });
   } catch (error) {
-    res.status(500).json({ message: "error server update task ", error });
+    res.json({ message: "error server update task ", error });
   }
 };
