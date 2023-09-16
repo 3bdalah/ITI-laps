@@ -2,7 +2,7 @@ import userModel from "../../../db/models/user.model.js";
 import bcrypt from "bcrypt";
 import Joi from "joi";
 import jwt from "jsonwebtoken";
-
+import { sendEmail } from "../../../utils/SendEmail.js";
 export const signUpValidationSchema = Joi.object({
   userName: Joi.string().min(3).max(15).required(),
   email: Joi.string().email().required(),
@@ -31,17 +31,18 @@ export const signUp = async (req, res) => {
         res.status(409).json({ message: "Already Register ", allusers });
       if (!foundedUser) {
         let hashedPassword = bcrypt.hashSync(req.body.password, 10);
+        sendEmail(req.body.email);
         let addedUser = await userModel.insertMany({
           ...req.body,
           password: hashedPassword,
         });
         let allUsers = await userModel.find();
-        res
+        return res
           .status(201)
           .json({ message: "added new user successfully", allUsers });
       }
     }
   } catch (error) {
-    res.json({ message: "error response" });
+    return res.json({ message: "error response" });
   }
 };
