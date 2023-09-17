@@ -1,11 +1,20 @@
 import userModel from "../../../db/models/user.model.js";
-import bcrypt from "bcrypt";
 import Joi from "joi";
-import jwt from "jsonwebtoken";
+
+const schema = Joi.object({
+  id: Joi.string().required(),
+});
 
 export const deletedUser = async (req, res) => {
   try {
-    let { id } = req.params;
+    const { id } = req.params;
+
+    const { error } = schema.validate({ id });
+
+    if (error) {
+      return res.status(400).json({ message: error.details[0].message });
+    }
+
     let deletedUser = await userModel.findByIdAndRemove(id);
     if (!deletedUser) {
       res.status(400).json({ message: "User Not Found" });

@@ -1,34 +1,54 @@
-import mongoose from "mongoose"; // Import mongoose
+import mongoose from "mongoose";
 import taskModel from "../../../db/models/task.model.js";
 import userModel from "./../../../db/models/user.model.js";
+import Joi from "joi";
+
 export const updateTask = async (req, res) => {
   try {
-    let { id } = req.params;
-    let foundedTask = await taskModel.findById(id);
+    const { id } = req.params;
+
+    const schema = Joi.object({
+      userId: Joi.string().required(),
+      assignTo: Joi.string(),
+      status: Joi.string(),
+    });
+
+    const { userId, assignTo, status } = req.body;
+    const validation = schema.validate({ userId, assignTo, status });
+
+    if (validation.error) {
+      return res
+        .status(400)
+        .json({ message: validation.error.details[0].message });
+    }
+
+    const foundedTask = await taskModel.findById(id);
+
     if (!foundedTask) {
-      return res.status(404).json({ message: "Not found the task " });
+      return res.status(404).json({ message: "Task not found" });
     }
-    let newFoundedTask = await foundedTask.populate("userId");
-    // console.log("userid New Founded Task ", newFoundedTask);
-    let { userId, assignTo, status } = req.body;
-    console.log(
-      "userId creator task to string ",
-      newFoundedTask.userId._id.toString()
-    );
-    if (userId !== newFoundedTask.userId._id.toString()) {
-      return res.status(404).json({ message: "userID Creator Uncorrected" });
+
+    const newFoundedTask = await foundedTask.populate("userId");
+    const userIdString = newFoundedTask.userId._id.toString();
+
+    if (userId !== userIdString) {
+      return res.status(401).json({ message: "User ID Creator Uncorrected" });
     }
-    let afterUpdate = await taskModel.findByIdAndUpdate(id, {
+
+    const afterUpdate = await taskModel.findByIdAndUpdate(id, {
       status: status,
     });
-    let allTasks = await taskModel.find();
+
+    const allTasks = await taskModel.find();
+
     return res.status(201).json({
-      message: "After Updated",
+      message: "Task Updated Successfully",
       afterUpdate,
-      allTasks: "All task After Update",
+      allTasks: "All tasks after update",
       allTasks,
     });
   } catch (error) {
-    return res.json({ message: "error server update task ", error });
+    console.error("Error updating task:", error);
+    return res.status(500).json({ message: "Internal Server Error" });
   }
 };

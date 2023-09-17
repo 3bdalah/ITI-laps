@@ -1,9 +1,23 @@
 import taskModel from "./../../../db/models/task.model.js";
+import Joi from "joi";
+
+const schema = Joi.object({
+  id: Joi.string().required(),
+  userId: Joi.string().required(),
+});
 
 export const deleteTask = async (req, res) => {
   try {
-    let { id } = req.params;
-    let { userId } = req.body;
+    const { id } = req.params;
+    const { userId } = req.body;
+    const validation = schema.validate({ id, userId });
+
+    if (validation.error) {
+      return res
+        .status(400)
+        .json({ message: validation.error.details[0].message });
+    }
+
     let checkFoundedTask = await taskModel.findById(id);
 
     if (!checkFoundedTask) {

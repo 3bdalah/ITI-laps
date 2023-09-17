@@ -1,0 +1,17 @@
+<p>search works!</p>
+<input type="text" name="search" [(ngModel)]="query" />
+<button type="button" (click)="displayUsers()">Search</button>
+
+<button type="button" (click)="resetSearch()">Reset</button>
+
+<div class="list-users">
+  <div class="user" *ngFor="let user of newUsers">
+    <div class="card">
+      <img src={{user.image}} alt={{user.username}} />
+    <p>Username: {{ user.username }}</p>
+    <p>Phone: {{ user.phone }}</p>
+    <p>Age: {{ user.age }}</p>
+    <p>Email: {{ user.email }}</p>
+    </div>
+  </div>
+</div>

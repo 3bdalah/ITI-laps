@@ -3,26 +3,29 @@ import bcrypt from "bcrypt";
 import Joi from "joi";
 import jwt from "jsonwebtoken";
 
+const schema = Joi.object({
+  id: Joi.string().required(),
+  newPassword: Joi.string().min(6).required(),
+});
+
 export const changePassword = async (req, res) => {
   try {
     const { id } = req.params;
     const { newPassword } = req.body;
 
-    // Find the user by ID
+    const { error } = schema.validate({ id, newPassword });
+
+    if (error) {
+      return res.status(400).json({ message: error.details[0].message });
+    }
+
     const user = await userModel.findById({ _id: id });
-    console.log("usercheng", user);
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
 
-    // Debugging: Check the values of oldPassword and user.password
-    // console.log("oldPassword:", password);
-    console.log("user.password:", user.password);
-
-    // Hash the new password
     const hashedPassword = bcrypt.hashSync(newPassword, 10);
 
-    // Update the user's password in the database
     user.password = hashedPassword;
     const newUser = await userModel.findByIdAndUpdate(id, {
       password: hashedPassword,

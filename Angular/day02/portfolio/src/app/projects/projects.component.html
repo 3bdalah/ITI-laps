@@ -1,37 +1,9 @@
 <section class="projects"> 
     <div class="container">
      <div class="row">
-      <div class="col-lg-4 ">
-        <div class="card even">
-            <h4 class="name-project">Name Project</h4>
-        </div>
-      </div>
-      <div class="col-lg-4 ">
-        <div class="card odd">
-            <h4 class="name-project">Name Project</h4>
-        </div>
-      </div>
-
-      <div class="col-lg-4 ">
-        <div class="card even">
-            <h4 class="name-project">Name Project</h4>
-        </div>
-      </div>
-
-      <div class="col-lg-4 ">
-        <div class="card odd">
-            <h4 class="name-project">Name Project</h4>
-        </div>
-      </div>
-
-      <div class="col-lg-4 ">
-        <div class="card even">
-            <h4 class="name-project">Name Project</h4>
-        </div>
-      </div>
-      <div class="col-lg-4 ">
-        <div class="card odd">
-            <h4 class="name-project">Name Project</h4>
+      <div class="col-lg-4 " *ngFor="let project of listProjects ; let counter = index" >
+        <div class="card " [ngClass]="{'even':counter % 2 != 0 ,'odd':counter %2==0 }">
+            <h4 class="name-project">{{project}}</h4>
         </div>
       </div>
      </div>
