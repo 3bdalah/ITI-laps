@@ -6,7 +6,7 @@ import { SearchComponent } from './search/search.component';
 import { CardsComponent } from './cards/cards.component';
 import { FooterComponent } from './footer/footer.component';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +14,7 @@ import { FormsModule } from '@angular/forms';
     CardsComponent,
     FooterComponent,
   ],
-  imports: [BrowserModule, FormsModule],
+  imports: [BrowserModule, FormsModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
 })
