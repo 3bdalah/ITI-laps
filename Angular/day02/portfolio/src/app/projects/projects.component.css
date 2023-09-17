@@ -1,0 +1,23 @@
+.projects{
+   margin: 10px;
+}
+.projects .card{
+    margin: 13px auto ;
+    height: 200px;
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+.even{
+    background-color: #444;
+}
+.odd{
+    background-color: #131010;
+}
+.name-project{
+   color:#fff;
+   border-bottom: 2px solid #fff;
+   padding-bottom: 10px;
+   width: 80%;
+  margin: auto;
+}

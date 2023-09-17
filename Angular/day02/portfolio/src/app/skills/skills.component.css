@@ -1,0 +1,40 @@
+.skills{
+    margin-top: 30px;
+    background-color: #222;
+    color:#fff;
+    padding: 20px 0px;
+}
+.info-skills{
+width:80%;
+margin: auto;
+}
+
+.title-list{
+    margin-top: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+.list-skills{
+    display:block;
+    /* margin-top: 30px; */
+}
+.list-skills li{
+    list-style: none;
+    margin:10px 0px;
+}
+
+.block-skill {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.progress-skill{
+    height:50px;
+    width:50%;
+    float: left;
+}
+
+.label-file{
+    /* float: left; */
+    line-height: 2.7;
+}

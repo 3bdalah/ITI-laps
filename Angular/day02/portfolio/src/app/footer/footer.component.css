@@ -1,0 +1,32 @@
+.footer{
+    background-color: #222; 
+    color:#fff;   
+    margin-top: 40px;
+    padding-top: 30px;
+}
+
+.btn-contact-me{
+    border: 2px solid #fff;
+    
+}
+.btn-contact-me:hover{
+background-color: #fff;
+
+}
+.btn-contact-me a{
+    text-decoration: none;
+     color: #fff;
+}
+.btn-contact-me:hover a{
+   color: #222;
+}
+
+.list-icons{
+    list-style: none;
+    display: inline-block;
+}
+.list-icons li{
+    list-style: none;
+    display: inline-block;
+    width:30px;
+}
