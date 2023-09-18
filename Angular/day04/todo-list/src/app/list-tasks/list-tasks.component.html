@@ -1,0 +1,5 @@
+<app-add-task   (sendValueTask)="recevieValue($event)"></app-add-task>
+<p>list-tasks works!</p>
+<div class="task" *ngFor="let task of listTask">
+    <app-task [taskItem]="task" (recivedDeleteID)="receivedIDTask($event)" ></app-task>
+</div>

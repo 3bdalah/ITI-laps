@@ -1,0 +1,6 @@
+
+<div class="body-task" [ngClass]="{'lineThrough':taskItem.isDone }">
+    <button (click)="handleCompleted()"  >Completed</button>
+    <span [ngClass]="{'lineThrough':taskItem.isDone }">{{taskItem.content}}</span>
+    <button (click)="handleDelete(taskItem.id)">Delete</button>
+</div>
