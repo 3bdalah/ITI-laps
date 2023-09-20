@@ -1,0 +1,9 @@
+<div class="card" [ngStyle]="{'border': userNameActiveFromParent== userData.username ? '2px solid green':''}" >
+    <img [src]="userData.image" alt="{{ userData.username }}" />
+    <p>Username: {{ (userData.username == userNameActiveFromParent) ? (userData.username | uppercase) : userData.username }}</p>
+    <p>Phone: {{ userData.phone }}</p>
+    <p>Age: {{ userData.age }}</p>
+    <p>Email: {{ userData.email }}</p>
+    <p>Date Time : {{ (userData.username == userNameActiveFromParent) ? (userData.birthDate | date) : userData.birthDate }}</p>
+    <button class="btn btn-active" (click)="handlActive(userData.username)" > active </button>
+</div>

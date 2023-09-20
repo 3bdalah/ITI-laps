@@ -1,1 +1,10 @@
 <p>cards works!</p>
+<p>User Name {{userNameActive}}</p>
+<!-- <app-search></app-search> -->
+<div class="list-users">
+    <div class="user" *ngFor="let user of newUsers">
+      <app-user [userData]="user" (userNameSend)="receiveDataUser($event)"></app-user>
+    </div>
+  </div>
+  
+<!-- <app-user ></app-user> -->

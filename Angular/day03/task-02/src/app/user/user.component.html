@@ -1,0 +1,8 @@
+<div class="card">
+    <img [src]="userData.image" alt="{{ userData.username }}" />
+    <p>Username: {{ userData.username }}</p>
+    <p>Phone: {{ userData.phone }}</p>
+    <p>Age: {{ userData.age }}</p>
+    <p>Email: {{ userData.email }}</p>
+    <button class="btn btn-active" (click)="handlActive(userData.username)"> active </button>
+</div>

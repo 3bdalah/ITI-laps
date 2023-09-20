@@ -1,0 +1,13 @@
+<p>listusers works!</p>
+<h2>isername active now  = {{userNameActive}}</h2>
+<input type="text" name="search" [(ngModel)]="query" />
+<button type="button" (click)="handleSearch(query)">Search</button>
+<button type="button" (click)="handleReset()">Reset</button>
+
+<div class="users-cards">
+    <div class="user" *ngFor="let user of usersList">
+        <app-user [userNameActiveFromParent]="userNameActive" [userData]="user"  (userNameSending)="receivedUserNameFromCard($event)"></app-user>
+    </div>
+</div>
+
+<!-- (userNameSend)="receiveDataUser($event)" -->
