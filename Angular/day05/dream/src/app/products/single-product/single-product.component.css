@@ -1,0 +1,15 @@
+.body-product-page{
+    margin-top: 20px;
+}
+.all-images-product{
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+}
+.slide-img{
+    margin-top:3px;
+    border:2px solid #222;
+   width:100px;
+   height:70px;
+   cursor: pointer;
+}

@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="row body-product-page">
+        <div class="col-lg-6 left-side">
+            <div class="box-image-product">
+              <img class="card-img-top" [src]="productFullData.thumbnail" [alt]="productFullData.title" />
+            </div>
+            <div class="all-images-product">
+              <div class="footer-image" *ngFor="let img of productFullData.images">
+                <img class="slide-img " [src]="img" [alt]="productFullData.title" />
+              </div>
+            </div>
+          </div>
+          
+        <div class="col-lg-6 right-side">
+          <div class="all-data-product-">
+            <h3>{{ productFullData.title }}</h3>
+            <p>{{ productFullData.description }}</p>
+            <span>{{productFullData.rating}}</span>
+            <hr/>
+            <h3>{{productFullData.price}}</h3>
+            <span>vfdjvb fdjivndsjfv fndsvhfv jdfnv</span>
+            <hr/>
+            <p>{{productFullData.stock}}</p>
+            <p>more information</p>
+            <span>{{productFullData.category}}</span>
+            <span>{{productFullData.brand}}</span>
+            <hr/>
+             <div class="group-btns">
+              <button class="decrease">-</button>
+              <span class="num-products">1</span>
+              <button class="increase">+</button>
+            
+              <span>only {{productFullData.stock}} items left Don't miss it </span>
+              <div class="btns group-btn">
+                <button class="btn btn-success">Buy Now</button>
+                <button class="btn btn-primary">Add To Cart </button>
+              </div>
+             </div>
+          </div>
+        </div>
+      </div>
+      
+</div>

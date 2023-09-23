@@ -1,0 +1,8 @@
+<p>list-products works!</p>
+<div class="contianer">
+<div class="row">
+    <div class="col-lg-4  col-md-6  col-sm-12 m-auto card-product card" style="width: 18rem;"  *ngFor="let product of productslist">
+       <app-card-product [productData]="product"></app-card-product>
+    </div>
+</div>
+</div>

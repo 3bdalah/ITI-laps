@@ -1,0 +1,14 @@
+
+<div class="card-content" (click)="openDetaliesProduct(productData.id)">
+    <div class="box-img">
+        <span>{{productData.stock}}</span>
+      <img class="card-img-top" [src]="productData.thumbnail" alt="{{ productData.title }}" />
+    </div>
+    <div class="card-body">
+        <h3 class="title-product">{{ productData.title }}</h3>
+        <span>{{productData.price}}</span>
+        <span>{{productData.description}}</span>
+        <span>{{productData.rating}}</span>
+        <button class="btn bg-info" routerLink="productData.id">add to cart</button>
+    </div>
+  </div>
