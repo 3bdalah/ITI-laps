@@ -1,7 +1,7 @@
 
-<div class="card-content" (click)="openDetaliesProduct(productData.id)">
+<div class="card-content"  (click)="openDetaliesProduct(productData.id)">
     <div class="box-img">
-        <span>{{productData.stock}}</span>
+        <span>{{productData.stock > 0 ?"InStock" :"OutOfStock"}}</span>
       <img class="card-img-top" [src]="productData.thumbnail" alt="{{ productData.title }}" />
     </div>
     <div class="card-body">
@@ -10,5 +10,6 @@
         <span>{{productData.description}}</span>
         <span>{{productData.rating}}</span>
         <button class="btn bg-info" routerLink="productData.id">add to cart</button>
+        <!-- <button class="btn bg-success" (click)="openDetaliesProduct(productData.id)" >view product</button> -->
     </div>
   </div>

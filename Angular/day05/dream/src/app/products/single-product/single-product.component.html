@@ -17,13 +17,13 @@
             <p>{{ productFullData.description }}</p>
             <span>{{productFullData.rating}}</span>
             <hr/>
-            <h3>{{productFullData.price}}</h3>
+            <h3>{{(productFullData.price).toFixed(2)}}$</h3>
             <span>vfdjvb fdjivndsjfv fndsvhfv jdfnv</span>
             <hr/>
-            <p>{{productFullData.stock}}</p>
+            <p>number Product at Store {{productFullData.stock}}</p>
             <p>more information</p>
-            <span>{{productFullData.category}}</span>
-            <span>{{productFullData.brand}}</span>
+            <span>category :  {{productFullData.category}} </span>
+            <span>Brand :  {{productFullData.brand}} </span>
             <hr/>
              <div class="group-btns">
               <button class="decrease">-</button>
