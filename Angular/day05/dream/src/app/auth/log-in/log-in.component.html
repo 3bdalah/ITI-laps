@@ -3,7 +3,7 @@
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label">Email address</label>
           <input type="email" email class="form-control" id="exampleInputEmail1" name="email" ngModel required minlength="3" #email="ngModel">
-          <div *ngIf="email.invalid && (email.dirty || email.touched)">
+          <div *ngIf="email.invalid && email.touched">
             <div *ngIf="email.errors?.['required']">Email is required.</div>
             <div *ngIf="email.errors?.['minlength']">Email must be at least 3 characters long.</div>
             <div *ngIf="email.errors?.['email']">Invalid email format.</div>
