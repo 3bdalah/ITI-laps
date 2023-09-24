@@ -1,1 +1,23 @@
-<p>log-in works!</p>
+<div class="container">
+    <form #logInForm="ngForm" (ngSubmit)="handleLogin(logInForm)">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Email address</label>
+          <input type="email" email class="form-control" id="exampleInputEmail1" name="email" ngModel required minlength="3" #email="ngModel">
+          <div *ngIf="email.invalid && (email.dirty || email.touched)">
+            <div *ngIf="email.errors?.['required']">Email is required.</div>
+            <div *ngIf="email.errors?.['minlength']">Email must be at least 3 characters long.</div>
+            <div *ngIf="email.errors?.['email']">Invalid email format.</div>
+        </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" name="password" ngModel required minlength="8" #password="ngModel">
+          <div *ngIf="password.invalid && (password.dirty || password.touched)">
+            <div *ngIf="password.errors?.['required']">Password is required.</div>
+            <div *ngIf="password.errors?.['minlength']">Password must be at least 8 characters long.</div>
+            <div *ngIf="password.errors?.['pattern']">Password must contain at least one lowercase letter, one uppercase letter, one digit, and one special character (e.g., *@%$#).</div>
+        </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="logInForm.invalid">Submit</button>
+      </form>
+</div>

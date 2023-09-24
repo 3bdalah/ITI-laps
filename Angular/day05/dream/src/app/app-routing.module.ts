@@ -6,6 +6,7 @@ import { LogInComponent } from './auth/log-in/log-in.component';
 import { SingleProductComponent } from './products/single-product/single-product.component';
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: ListProductsComponent },
