@@ -7,6 +7,7 @@ import { SingleProductComponent } from './products/single-product/single-product
 import { NotFoundComponent } from './error/not-found/not-found.component';
 import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CartComponent } from './products/cart/cart.component';
 
 const routes: Routes = [
   { path: '', component: ListProductsComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'log-in', component: LogInComponent },
   { path: 'sign-up', component: SignUpComponent },
   { path: 'products/:id', component: SingleProductComponent },
+  { path: 'cart', component: CartComponent },
   { path: '**', component: NotFoundComponent },
 ];
 

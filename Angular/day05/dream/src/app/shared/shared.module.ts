@@ -4,10 +4,11 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import { ProductsModule } from '../products/products.module';
 @NgModule({
   declarations: [HeaderComponent, FooterComponent],
-  imports: [CommonModule, AppRoutingModule],
+  imports: [CommonModule, AppRoutingModule, HttpClientModule],
 
   exports: [HeaderComponent, FooterComponent],
 })

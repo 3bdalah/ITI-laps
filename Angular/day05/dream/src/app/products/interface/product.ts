@@ -11,4 +11,5 @@ export interface Product {
   thumbnail: string;
   images: string[];
   createdAt: string;
+  quantity?: number;
 }

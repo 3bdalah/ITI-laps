@@ -1,0 +1,22 @@
+<p>cart works!</p>
+<div class="card-product">
+<div *ngFor="let pd of allProductsAddedAtCart">
+  <div>{{pd.title}}</div>
+  <div>{{pd.description}}</div>
+  <div>{{pd.brand}}</div>
+  
+  <div>
+    <button (click)="decreaseQuantity(pd.id)">decrease</button>
+    {{pd.quantity}}
+   <button (click)="inCreaseQuantity(pd.id)">increase </button>
+</div>
+
+  <div class="box-img">
+    <img [src]="pd.thumbnail" [alt]="pd.title"/>
+  </div>
+</div>
+<h1>
+total price
+    {{totalPriceItemsCart}}
+</h1>
+</div>
