@@ -1,22 +1,40 @@
-<p>cart works!</p>
-<div class="card-product">
-<div *ngFor="let pd of allProductsAddedAtCart">
-  <div>{{pd.title}}</div>
-  <div>{{pd.description}}</div>
-  <div>{{pd.brand}}</div>
-  
-  <div>
-    <button (click)="decreaseQuantity(pd.id)">decrease</button>
-    {{pd.quantity}}
-   <button (click)="inCreaseQuantity(pd.id)">increase </button>
-</div>
 
-  <div class="box-img">
-    <img [src]="pd.thumbnail" [alt]="pd.title"/>
+<div class="card-product">
+  <div class="container">
+    <div *ngIf="allProductsAddedAtCart.length > 0; else EmptyCart">
+      <!-- Content for when the cart is not empty -->
+      <div class="cart-not-empty">
+        <div class="d-flex flex-nowrap" *ngFor="let product of allProductsAddedAtCart">
+          <div class="order-1 p-3 box-image">
+            <img [src]="product.thumbnail" [alt]="product.title">
+          </div>
+          <!-- <div class="order-3 p-2"></div> -->
+          <div class="order-3 p-4">
+            <button   class="btn btn-info" (click)="decreaseQuantity(product.id)">decrease</button>
+            {{ product.quantity }}
+            <button  [disabled]="product.stock === product.quantity" class="btn btn-primary" (click)="inCreaseQuantity(product.id)">increase</button>
+            <button class="btn btn-danger" (click)="removeProductFromCart(product.id)">remove</button>
+          </div>
+          <div class="order-2 p-3">
+            title: {{ product.title }} <br/> brand: {{ product.brand }} <br/>
+            number items on stock {{ product.stock }}<br/>
+            item on stock: {{ product.stock === product.quantity ? 'Out of Stock' : 'in Stock' }}
+          </div>
+          <div>
+            <div class="order-4 p-2">
+              <h4>{{ product.price }}$</h4>
+            </div>
+          </div>
+        </div>
+        <h1 class="cart-board-total-price">
+          total price
+          {{ totalPriceItemsCart }}$
+        </h1>
+      </div>
+    </div>
+    <ng-template #EmptyCart>
+      <!-- Content for when the cart is empty -->
+      <iframe src="https://giphy.com/embed/g01ZnwAUvutuK8GIQn" width="100%" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+    </ng-template>
   </div>
-</div>
-<h1>
-total price
-    {{totalPriceItemsCart}}
-</h1>
 </div>

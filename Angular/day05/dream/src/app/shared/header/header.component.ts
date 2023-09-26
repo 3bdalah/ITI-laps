@@ -7,15 +7,13 @@ import { CartService } from 'src/app/products/services/cart.service';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  counterItemsCart: number = 0;
-  constructor(private cartcounterItems: CartService) {}
+  counterItemsCart!: any;
+
+  constructor(private ItemsFromcartServices: CartService) {}
   ngOnInit() {
-    // this.cartcounterItems.getAllItemsCounterAtCart().subscribe((length) => {
-    //   console.log('length items ', length);
-    //   this.counterItemsCart = length;
-    // });
-    // this.cartItemsLength.getAllProductsCart.subscribe((length) => {
-    //   this.counterItemsCart = length;
-    // });
+    this.ItemsFromcartServices.getTotalItemsAtCart().subscribe((length) => {
+      console.log('from header compenent', length);
+      this.counterItemsCart = length;
+    });
   }
 }

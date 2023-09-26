@@ -27,5 +27,8 @@ export class CartComponent {
     console.log('test clicked form cart component', id);
     this.allProductsAtCart.InCreaseProduct(id);
   }
+  removeProductFromCart(id: number) {
+    this.allProductsAtCart.handleRemoveProduct(id);
+  }
   // console.log("products at cart component" , this.allProductsAddedAtCart);
 }

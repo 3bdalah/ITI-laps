@@ -21,6 +21,10 @@ export class CardProductComponent {
   AddToProductToCartFromCard(productInfo: Product) {
     this.cartItems.addProductToCart(productInfo);
     this.router.navigate(['cart']);
+    this.cartItems.showMessage('added Product To Cart');
+    setTimeout(() => {
+      this.cartItems.hideMessage();
+    }, 2000);
   }
   openDetaliesProduct(id: number) {
     this.router.navigate(['products', id]);
