@@ -1,0 +1,11 @@
+.btnAddNewProduct{
+    position: fixed;
+    top:10px;
+    left: 10px;
+    width:200px;
+    height:50px;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    background: #222;
+    color: white;
+}

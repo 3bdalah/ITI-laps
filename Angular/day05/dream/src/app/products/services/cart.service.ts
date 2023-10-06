@@ -35,7 +35,6 @@ export class CartService {
       let productWithQuantity: any = { ...productData, quantity: 1 };
       this.cartItems.push(productWithQuantity);
     }
-    console.log('cart items at service', this.cartItems);
     this.cartItemsSubject.next(this.cartItems);
 
     // this.showMessage('added New Product To Cart');
@@ -85,7 +84,6 @@ export class CartService {
       return curr;
     }, 0);
     this.totalPriceCart.next(this.totalPrice);
-    console.log('total price cart', this.totalPriceCart.asObservable());
     return this.totalPriceCart.asObservable();
   }
 
